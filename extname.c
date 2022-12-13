@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
       str++;
     }
   } else {
-    int offset = 0;
     size_t len = strlen(str);
+    int offset = len;
     for (int i = len - 1; i > 0; i--) {
       if (str[i] == '.') {
         offset = i;

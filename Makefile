@@ -2,8 +2,11 @@
 
 all: extname
 
-extname:
-	cc extname.c -o extname
+extname: extname.o
+	cc -I. extname.o cli.c -o extname
+
+extname.o:
+	cc -c extname.c -o extname.o
 
 test: extname
 	./test.sh

@@ -22,3 +22,5 @@ $ extname ./.git/hooks/commit-msg.sample
 Made by Lily Skye in December 2022
 
 I release this work into the public domain
+
+tests rely on [hopic](https://github.com/suchipi/hopic/releases/tag/0.1.0)

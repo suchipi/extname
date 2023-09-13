@@ -1,0 +1,92 @@
+#> ./extname
+status: 1
+stdout: |
+  usage: extname [options] <string>
+  options:
+    -f/--full: show full extension (more than one dot)
+stderr: ""
+
+#> ./extname -h
+status: 1
+stdout: |
+  usage: extname [options] <string>
+  options:
+    -f/--full: show full extension (more than one dot)
+stderr: ""
+
+#> ./extname --help
+status: 1
+stdout: |
+  usage: extname [options] <string>
+  options:
+    -f/--full: show full extension (more than one dot)
+stderr: ""
+
+#> ./extname something.ts
+status: 0
+stdout: |
+  .ts
+stderr: ""
+
+#> ./extname -f something.ts
+status: 0
+stdout: |
+  .ts
+stderr: ""
+
+#> ./extname --full something.ts
+status: 0
+stdout: |
+  .ts
+stderr: ""
+
+#> ./extname Makefile
+status: 0
+stdout: "\n"
+stderr: ""
+
+#> ./extname -f Makefile
+status: 0
+stdout: "\n"
+stderr: ""
+
+#> ./extname --full Makefile
+status: 0
+stdout: "\n"
+stderr: ""
+
+#> ./extname something.d.ts
+status: 0
+stdout: |
+  .ts
+stderr: ""
+
+#> ./extname -f something.d.ts
+status: 0
+stdout: |
+  .d.ts
+stderr: ""
+
+#> ./extname --full something.d.ts
+status: 0
+stdout: |
+  .d.ts
+stderr: ""
+
+#> ./extname ./.git/hooks/commit-msg.sample
+status: 0
+stdout: |
+  .sample
+stderr: ""
+
+#> ./extname -f ./.git/hooks/commit-msg.sample
+status: 0
+stdout: |
+  .sample
+stderr: ""
+
+#> ./extname --full ./.git/hooks/commit-msg.sample
+status: 0
+stdout: |
+  .sample
+stderr: ""

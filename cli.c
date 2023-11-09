@@ -8,6 +8,7 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 #include "extname.h"
 
 int main(int argc, char *argv[])

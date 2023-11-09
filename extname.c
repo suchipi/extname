@@ -7,6 +7,8 @@
   I release this work into the public domain
 */
 
+#include <string.h>
+#include <libgen.h>
 #include "extname.h"
 
 char *extname(char *input, int full_mode)

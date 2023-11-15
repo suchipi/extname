@@ -9,4 +9,4 @@ extname.o:
 	cc -c extname.c -o extname.o
 
 test: extname
-	./test.sh
+	hopic test.yml
